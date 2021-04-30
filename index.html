@@ -11,9 +11,27 @@
     <title>Minimalist-Portfolio</title>
 </head>
 <body>
-    <header>
-        <h1>Hello</h1>
+    <header class="main-header">
+        <div class="container">
+            <div class="container-logo">
+                    <img src="img/Home/Combined Shape.svg" alt="Portfolio logo">
+            </div>
+            <nav class="main-nav">
+                <button class="main-nav__toggler" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+                    <span class="main-nav__bar"></span>
+                    <span class="main-nav__bar"></span>
+                    <span class="main-nav__bar"></span>
+                </button>
+                <!-- hidden property -->
+                <ul class="main-nav__list" id="menu">
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Home</a></li>
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Portfolio</a></li>
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    
     <main>
 
     </main>
