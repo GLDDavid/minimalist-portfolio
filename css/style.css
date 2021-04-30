@@ -1,0 +1,102 @@
+:root {
+    --whitePrimary: #FFFFFF;
+    --blackPrimary: #000000;
+
+    --grayishDarkBluePrimary : #33323D;
+    --slightlyPrimary: #5FB4A2;
+    --darkBluePrimary: #203A4C;
+    
+    --veryLightGreySecondary: #FAFAFA;
+    --lightGreySecondary: #EAEAEB;
+    --brightRedSecondary: #F43030;
+    
+    --lightGreyTertiary: #33323D18;
+    --lightMoreGreyTertiary: #ECECED;
+    --brownTertiary: #575757;
+    --regularGreyTertiary: #D7D7D7;
+}
+
+/* ------------------------------------------- */
+/* ------------------ FONTS ------------------ */
+/* ------------------------------------------- */
+
+/* Ibarra Real Nova Regular */
+@font-face {
+    font-family: "IbarraRealNova";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/Ibarra_Real_Nova/IbarraRealNova-VariableFont_wght.ttf");
+}
+
+/* Ibarra Real Nova Italic */
+@font-face {
+    font-family: "IbarraRealNova";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../font/Ibarra_Real_Nova/IbarraRealNova-Italic-VariableFont_wght.ttf");
+}
+
+/* Public Sans Regular */
+@font-face {
+    font-family: "PublicSans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/Public_Sans/PublicSans-VariableFont_wght.ttf");
+}
+
+/* Public Sans Italic */
+@font-face {
+    font-family: "PublicSans";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../font/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf");
+}
+
+
+/* ------------------------------------------- */
+/* ---------------- CONTAINER ---------------- */
+/* ------------------------------------------- */
+
+/*.container {
+    max-width: 32.5rem;
+    margin: auto;
+  }
+*/
+
+  @media (min-width: 36em) {
+    /* 36em * 16 = 576px */
+    .container {
+      max-width: 50rem;
+    }
+  }
+  
+  @media (min-width: 48em) {
+    /* 48em * 16 = 768px */
+    .container {
+      max-width: 70rem;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    /* 62em * 16 = 992px */
+    .container {
+      max-width: 90rem;
+    }
+  }
+  
+  @media (min-width: 80em) {
+    /* 80em * 16 = 1280px */
+    .container {
+      max-width: 110rem;
+    }
+  }
+  
+  @media (min-width: 105em) {
+    .container {
+      max-width: 128rem;
+    }
+  }
+
+/* ------------------------------------------- */
+/* ----------------   RESET   ---------------- */
+/* ------------------------------------------- */
