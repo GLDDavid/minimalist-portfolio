@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Minimalist-Portfolio</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="container-logo">
+                    <img src="img/Home/Combined Shape.svg" alt="Portfolio logo">
+            </div>
+            <nav class="main-nav">
+                <button class="main-nav__toggler" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+                    <span class="main-nav__bar"></span>
+                    <span class="main-nav__bar"></span>
+                    <span class="main-nav__bar"></span>
+                </button>
+                <!-- hidden property -->
+                <ul class="main-nav__list" id="menu">
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Home</a></li>
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Portfolio</a></li>
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main-container">
+
+        <section class="main-content">
+
+			<ul class="main-content-list">
+
+				<li class="main-content-item">
+					<div class="main-content-item-card">
+                        <figure class="main-content-illustration">
+                            <img    srcset="img/Portfolio/Bitmap.png, 
+                                            img/Portfolio/Bitmap@2x.png 2x" 
+                                    src="img/Portfolio/Bitmap.png"
+                                    alt="illustrastion of Manage" loading="lazy" />
+                        </figure>
+						<h2>Manage</h2>
+						<p class="card-paragraph">
+							This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.
+						</p>
+                        <a href="manage.html" class="btn-call-to-action">View Project</a>
+					</div>
+				</li>
+
+                <li class="main-content-item">
+					<div class="main-content-item-card">
+                        <figure class="main-content-illustration">
+                            <img    srcset="img/Portfolio/Bitmap-1.png, 
+                                            img/Portfolio/Bitmap-1@2x.png 2x" 
+                                    src="img/Portfolio/Bitmap-1.png"
+                                    alt="illustrastion of bookmark" loading="lazy" />
+                        </figure>
+						<h2>Bookmark</h2>
+						<p class="card-paragraph">
+							This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.
+						</p>
+                        <a href="bookmark.html" class="btn-call-to-action">View Project</a>
+					</div>
+				</li>
+                
+                <li class="main-content-item">
+					<div class="main-content-item-card">
+                        <figure class="main-content-illustration">
+                            <img    srcset="img/Portfolio/Bitmap-1.png, 
+                                            img/Portfolio/Bitmap-1@2x.png 2x" 
+                                    src="img/Portfolio/Bitmap-1.png"
+                                    alt="illustrastion of Insure" loading="lazy" />
+                        </figure>
+						<h2>Insure</h2>
+						<p class="card-paragraph">
+							This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.
+						</p>
+                        <a href="bookmark.html" class="btn-call-to-action">View Project</a>
+					</div>
+				</li>
+
+                <li class="main-content-item">
+					<div class="main-content-item-card">
+                        <figure class="main-content-illustration">
+                            <img    srcset="img/Portfolio/Bitmap-2.png, 
+                                            img/Portfolio/Bitmap-2@2x.png 2x" 
+                                    src="img/Portfolio/Bitmap-2.png"
+                                    alt="illustrastion of fylo" loading="lazy" />
+                        </figure>
+						<h2>Fylo</h2>
+						<p class="card-paragraph">
+							This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.
+						</p>
+                        <a href="fylo.html" class="btn-call-to-action">View Project</a>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+        <section class="home-container call-to-action-before-footer">
+            <h2>Interested in doing <span>a project together?</span></h2>
+            <div class="line"></div>
+            <a href="contact-me.html" class="btn">Contact me</a>
+                </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="logo ir">portfolio</div>
+        <nav class="footer-nav">
+            <ul class="main-nav__list" id="menu">
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Home</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Portfolio</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Contact me</a></li>
+            </ul>
+        </nav>
+        <ul class="social-list">
+            <li class="social-item"><a href="https://github.com/" target="_blank" class="ir">Visit portfolio's github</a></li>
+            <li class="social-item"><a href="https://twitter.com/" target="_blank" class="ir">Visit portfoio's Twitter</a></li>
+            <li class="social-item"><a href="https://fr.linkedin.com/" target="_blank" class="ir">Visit portfolio's linkedIn</a></li>
+        </ul>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Minimalist-Portfolio</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="container-logo">
+                    <img src="img/Home/Combined Shape.svg" alt="Portfolio logo">
+            </div>
+            <nav class="main-nav">
+                <button class="main-nav__toggler" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+                    <span class="main-nav__bar"></span>
+                    <span class="main-nav__bar"></span>
+                    <span class="main-nav__bar"></span>
+                </button>
+                <!-- hidden property -->
+                <ul class="main-nav__list" id="menu">
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Home</a></li>
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Portfolio</a></li>
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main-container">
+       <section>
+           <div>
+                <div>
+                    <h2>Get in Touch</h2>
+                </div>
+                <div>
+                    <p>I’d love to hear about what you’re working on and how I could help. I’m currently looking for a new role and am open to a wide range of opportunities. My preference would be to find a position in a company in London. But I’m also happy to hear about opportunites that don’t fit that description. I’m a hard-working and positive person who will always approach each task with a sense of purpose and attention to detail. Please do feel free to check out my online profiles below and get in touch using the form.</p>
+                </div>
+                <ul class="social-list">
+                    <li class="social-item"><a href="https://github.com/" target="_blank" class="ir">Visit portfolio's github</a></li>
+                    <li class="social-item"><a href="https://twitter.com/" target="_blank" class="ir">Visit portfoio's Twitter</a></li>
+                    <li class="social-item"><a href="https://fr.linkedin.com/" target="_blank" class="ir">Visit portfolio's linkedIn</a></li>
+                </ul>
+           </div>
+       </section>
+
+       <section>
+           <div>
+                <div>
+                    <h2>Get in Touch</h2>
+                </div>
+                <div>
+                    <form action="" method="post" class="form-contact">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Jane Appleseed" required>
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="email@example.com" required>
+                        <label for="message">Tell us your story:</label>
+                        <textarea id="message" name="message" placeholder="How can I help?" rows="5" cols="33"></textarea>
+                        <input type="submit" value="SEND MESSAGE">
+                    </form>
+                </div>
+           </div>
+       </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="logo ir">portfolio</div>
+        <nav class="footer-nav">
+            <ul class="main-nav__list" id="menu">
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Home</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Portfolio</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Contact me</a></li>
+            </ul>
+        </nav>
+        <ul class="social-list">
+            <li class="social-item"><a href="https://github.com/" target="_blank" class="ir">Visit portfolio's github</a></li>
+            <li class="social-item"><a href="https://twitter.com/" target="_blank" class="ir">Visit portfoio's Twitter</a></li>
+            <li class="social-item"><a href="https://fr.linkedin.com/" target="_blank" class="ir">Visit portfolio's linkedIn</a></li>
+        </ul>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

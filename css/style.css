@@ -254,3 +254,51 @@
 }
 
 
+
+
+
+
+
+
+/* ------------------------------------------- */
+/* ----------------   fleches ---------------- */
+/* ------------------------------------------- */
+
+.flexwrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* ------------------- */
+/* PEN STYLES      -- */
+/* ----------------- */
+
+/* Arrow holder */
+.arrowed {
+	position: relative;
+	/* height: 200px; width: 200px;
+	margin: 0 20px 20px 0;
+	border: 1px solid rgba(0,0,0,0.25); */
+}
+
+/* Just centering the examples */
+.arrowed div {
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	margin: auto;
+}
+
+/* -- ARROW 1      -- */
+
+.arrow-1 {
+	height: 15px; width: 15px;
+	border: 1px solid tomato;
+	border-width: 2px 2px 0 0;
+	transform: rotate(225deg);
+}
+.arrow-2 {
+	height: 15px; width: 15px;
+	border: 1px solid tomato;
+	border-width: 2px 2px 0 0;
+	transform: rotate(45deg);
+}

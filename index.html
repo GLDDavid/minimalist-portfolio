@@ -32,11 +32,53 @@
         </div>
     </header>
     
-    <main>
-
+    <main class="main-container">
+        <section class="home-container">
+            <figure class="hero-illustration">
+                <img    srcset="img/Home/Bitmap.png, 
+                                img/Home/Bitmap@2x.png 2x"            
+                        src="img/Home/Bitmap.png" alt="picture of static on i-mac" loading="lazy">
+            </figure>
+            <div class="hero-description">
+                <h1>Hey, I’m Alex Spencer and I love building beautiful websites</h1>
+                <a href="about-me" class="btn-primary"><img src="img/Home/Group 3.svg" alt="3 fleches"> About me</a>
+            </div>
+        </section>
+        <section class="home-container">
+            <article class="home-presentation">
+                <figure class="presentation-illustration">
+                    <img    srcset="img/Home/bitmap-1.png,
+                                    img/HOme/bitmap-1@2x.png 2x"   
+                            src="img/Home/Bitmap-1.png" alt="photo of me" loading="lazy">
+                </figure>
+                <div class="presentation-description">
+                    <h2>About Me</h2>
+                    <p>I’m a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required. I’m based in London, UK, but I’m happy working remotely and have experience in remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature whether that’s going for a walk, run or cycling. I’d love you to check out my work.</p>
+                    <a href="portfolio.html" class="btn-call-to-action">Go to portfolio</a>
+                </div>
+            </article>
+        </section>
+        <section class="home-container call-to-action-before-footer">
+            <h2>Interested in doing <span>a project together?</span></h2>
+            <div class="line"></div>
+            <a href="contact-me.html" class="btn-call-to-action">Contact me</a>
+                </div>
+        </section>
     </main>
-    <footer>
-
+    <footer class="main-footer">
+        <div class="logo ir">portfolio</div>
+        <nav class="footer-nav">
+            <ul class="main-nav__list" id="menu">
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Home</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Portfolio</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Contact me</a></li>
+            </ul>
+        </nav>
+        <ul class="social-list">
+            <li class="social-item"><a href="https://github.com/" target="_blank" class="ir">Visit portfolio's github</a></li>
+            <li class="social-item"><a href="https://twitter.com/" target="_blank" class="ir">Visit portfoio's Twitter</a></li>
+            <li class="social-item"><a href="https://fr.linkedin.com/" target="_blank" class="ir">Visit portfolio's linkedIn</a></li>
+        </ul>
     </footer>
     <script src="js/script.js"></script>
 </body>
