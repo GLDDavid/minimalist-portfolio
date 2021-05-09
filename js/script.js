@@ -15,3 +15,17 @@ toggleMenu.addEventListener('click', function () {
   toggleMenu.setAttribute('aria-expanded', !open);
   menu.hidden = !menu.hidden;
 });
+
+
+/* ------------------------------------------- */ 
+/* ---------- IMAGE BOUTON ABOUT ------------- */
+/* ------------------------------------------- */
+//Affecte la nouvelle image lorsque la souris survole l'élément
+function passaeDeLaSouris(element) {
+  element.setAttribute('src', 'url(../img/Home/Group-3-white.svg)');
+  }
+  //Affecte l'image de départ lorsque la souris ne survole plus l'élément
+  function departDeLaSouris(element) {
+  element.setAttribute('src', 'url(../img/Home/Group 3.svg)');
+  }
+  

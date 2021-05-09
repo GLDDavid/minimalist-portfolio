@@ -30,7 +30,7 @@
 
 /* Ibarra Real Nova Italic */
 @font-face {
-    font-family: "IbarraRealNova";
+    font-family: "IbarraRealNova-italic";
     font-style: italic;
     font-weight: 400;
     src: url("../font/Ibarra_Real_Nova/IbarraRealNova-Italic-VariableFont_wght.ttf");
@@ -46,7 +46,7 @@
 
 /* Public Sans Italic */
 @font-face {
-    font-family: "PublicSans";
+    font-family: "PublicSans-italic";
     font-style: italic;
     font-weight: 400;
     src: url("../font/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf");
@@ -60,11 +60,11 @@
 .container {
     margin: 0 auto;
   }
-  @media (min-width: 48em){
+  /* @media (min-width: 48em){
     .container {
       margin: 0 3.2rem;
     }
-  }
+  } */
 
 
   @media (min-width: 36em) {
@@ -95,19 +95,37 @@
     }
   }
   
-  @media (min-width: 105em) {
+  /* @media (min-width: 105em) {
     .container {
       max-width: 128rem;
     }
-  }
+  } */
 
 /* ------------------------------------------- */
 /* ----------------   RESET   ---------------- */
 /* ------------------------------------------- */
 
-
-
-
+body{
+  font-size: 16px;
+  font-family: "PublicSans", sans-serif;
+  color: var(--grayishDarkBluePrimary);
+}
+h1,
+h2{
+  font-family: "IbarraRealNova", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+}
+h2{
+  font-size: 40px;
+}
+h3{
+  font-family: "IbarraRealNova", sans-serif;
+  font-size: 32px;
+}
+a {
+  text-decoration: none;
+}
 
 
 
@@ -146,8 +164,7 @@
   right: 0;
   display: block;
   transition: .3s;
-  transform: translateX(-200%);
-
+  transform: translateX(-300%);
 }
 .main-nav__item{
   padding: 5rem 0;
@@ -178,15 +195,20 @@
     width: 22rem;
     height: 18rem;
     top: 10rem;
-    left: 10rem;
+    /* left: 10rem; */
+    left: 46%;
     background-color: var(--grayishDarkBluePrimary);
-  }
-  .main-nav__link {
-    padding-top: 0;
-    color: var(--whitePrimary);
     text-align: center;
   }
 
+  .main-nav__link {
+    color: var(--whitePrimary);
+    padding-right: 3rem;
+  }
+  .main-nav__link:hover,
+  .main-nav__link:focus{
+    color: var(--slightlyPrimary);
+  }
 }
 
 /* Mobile Menu */
@@ -200,7 +222,7 @@
 }
 
 .main-nav__bar {
-  width: 2.2rem;
+  width: 2.1rem;
   height: 0.2rem;
   background-color: var(--grayishDarkBluePrimary);
   transition: .3s;
@@ -236,7 +258,6 @@
   transform: translateX(0);
 }
 
-
 /* I want to make the menu disappear from the tablet format  */
 
 /* Media queries */
@@ -254,32 +275,80 @@
 
 }
 
+
+/* ------------------------------------------- */
+/* ---------  DIV BEFORE FOOTER   ------------ */
+/* ------------------------------------------- */
+
+.call-to-action-before-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 14rem 0;
+}
+.call-to-action-before-footer h2{
+  font-size: 40px;
+  text-align: left;
+  line-height: 1.2;
+}
+.call-to-action-before-footer span{
+  display: block;
+} 
+.line{
+  border-top: 1px solid var(--slightlyPrimary);
+  width: 53.4rem;
+}
 /* ------------------------------------------- */
 /* ----------------  FOOTER   ---------------- */
 /* ------------------------------------------- */
 
+
 .main-footer{
   background-color: var(--grayishDarkBluePrimary);
+}
+.container-footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.social-list{
+.container-logo-nav{
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.main-nav__list-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav__link-footer {
+  padding-left: 4rem;
+  font-family: "PublicSans";
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--whitePrimary);
+  text-decoration: none;
+}
+.main-nav__link-footer:hover,
+.main-nav__link-footer:focus{
+  color:var(--slightlyPrimary);
+}
+
+.social-item {
+  padding-left: 2rem;
+}
+.social-list{
+  display: flex;
+  margin: 4rem 0 4rem 0;
+}
+
 .social-item a{
  display: block;
   width: 3rem;
   height: 3rem;
-  margin-bottom: 4rem;
 }
-.social-item:last-child{
-  padding-left:1.3rem;
-  padding-top: .5rem;
-}
+
 .social-item a[href*="https://github.com/"]{
   background-image: url(../img/Home/Path.svg);
   background-repeat: no-repeat;
@@ -297,12 +366,95 @@ On augmente la taille du logo de 200% avec scale(2) */
 .social-item a:hover, .social-item a:focus{
   transform: scale(2);
 }
-
-
-
-
+  
+@media (max-width: 48em) {
+  /* 48em * 16 = 768px */
+  .container-logo-nav{
+    display: block;
+  }
+  .container-logo-nav img{
+    margin: 0 auto;
+  }
+  .footer-nav{
+    margin: 0 auto;
+  }
+  .container-footer{
+    display: block;
+    text-align: center;
+    padding: 3rem;
+  }
+  .main-nav__list-footer{
+    display: block;
+    margin-right: 3rem;
+  }
+  /* .container-logo{
+    margin-left: 19rem;
+  } */
+  .social-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-nav__item-footer{
+    margin: 0;
+    padding: 2rem 0;
+  }
+  .main-nav__item-footer:last-child{
+    margin-bottom: 4rem;
+  }
+}
 
 /* ------------------------------------------- */
+/* ----------------   BOUTON  ---------------- */
+/* ------------------------------------------- */
+
+.btn-link-about-me{
+  display: flex;
+  background-color: var(--darkBluePrimary);
+  color: var(--whitePrimary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 20rem;
+  height:4.8rem;
+  padding: 1.5rem;
+  background-image: url(../img/Home/Group-3.svg);
+  background-repeat: no-repeat;
+  background-position: top 1.8rem left 1.5rem;
+  padding-left: 7rem;
+}
+
+.btn-link-about-me:hover,
+.btn-link-about-me:focus{
+  background-color: var(--slightlyPrimary);
+  background-image: url(../img/Home/Group-3-white.svg);
+  background-repeat: no-repeat;
+  background-position: top 1.8rem left 1.5rem;
+}
+
+.btn-link-about-me:disabled{
+  background-color: var(--darkBluePrimary);
+}
+
+
+
+.link-call-to-action{
+  padding: 1.5rem 3.5rem;
+  color: var(--grayishDarkBluePrimary);
+  border: 1px solid var(--grayishDarkBluePrimary);
+  text-transform: uppercase;
+}
+.link-call-to-action:hover,
+.link-call-to-action:focus{
+  color: var(--whitePrimary);
+  background-color: var(--darkBluePrimary);
+}
+.link-call-to-action:disabled{
+  color: var(--slightlyPrimary);
+  border: 1px solid var(--slightlyPrimary);
+}
+/* ------------------------------------------- */ 
 /* ----------------   fleches ---------------- */
 /* ------------------------------------------- */
 
@@ -343,4 +495,53 @@ On augmente la taille du logo de 200% avec scale(2) */
 	border: 1px solid tomato;
 	border-width: 2px 2px 0 0;
 	transform: rotate(45deg);
+}
+
+
+/* ------------------------------------------- */
+/* ----------------   HOME    ---------------- */
+/* ------------------------------------------- */
+
+.home-container{
+  max-height: 75rem;
+}
+
+.hero-description{
+  width: 44.5rem;
+  height: 35.7rem;
+  position: relative;
+  bottom: 35.7rem;
+  background-color: var(--veryLightGreySecondary);
+}
+
+.hero-description h1{
+  text-align: left;
+  letter-spacing: -0.45px;
+  line-height: 1;
+  padding: 5.8rem 5.5rem 5rem 0;
+}
+
+.home-presentation{
+  display: grid;
+  grid-template-columns: 54rem 1fr;
+}
+.presentation-description{
+  width: 35rem;
+  height:60rem;
+  margin: 0 auto;
+  border-top: 1px solid var(--slightlyPrimary);
+  border-bottom: 1px solid var(--slightlyPrimary);
+}
+
+.presentation-description h2{
+  text-align: left;
+  font-size: 4rem;
+  padding-top: 5.4rem;
+}
+
+.presentation-description p{
+  text-align: left;
+  padding: 2.2rem 0;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
