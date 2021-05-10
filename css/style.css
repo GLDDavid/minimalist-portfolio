@@ -25,7 +25,8 @@
     font-family: "IbarraRealNova";
     font-style: normal;
     font-weight: 400;
-    src: url("../font/Ibarra_Real_Nova/IbarraRealNova-VariableFont_wght.ttf");
+    src:  local(''), 
+          url("../font/Ibarra_Real_Nova/IbarraRealNova-VariableFont_wght.ttf");
 }
 
 /* Ibarra Real Nova Italic */
@@ -33,7 +34,8 @@
     font-family: "IbarraRealNova-italic";
     font-style: italic;
     font-weight: 400;
-    src: url("../font/Ibarra_Real_Nova/IbarraRealNova-Italic-VariableFont_wght.ttf");
+    src:  local(''),
+          url("../font/Ibarra_Real_Nova/IbarraRealNova-Italic-VariableFont_wght.ttf");
 }
 
 /* Public Sans Regular */
@@ -41,7 +43,8 @@
     font-family: "PublicSans";
     font-style: normal;
     font-weight: 400;
-    src: url("../font/Public_Sans/PublicSans-VariableFont_wght.ttf");
+    src:  local(''), 
+          url("../font/Public_Sans/PublicSans-VariableFont_wght.ttf");
 }
 
 /* Public Sans Italic */
@@ -49,7 +52,8 @@
     font-family: "PublicSans-italic";
     font-style: italic;
     font-weight: 400;
-    src: url("../font/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf");
+    src:  local(''), 
+          url("../font/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf");
 }
 
 
@@ -175,7 +179,8 @@ a {
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 4rem;
-  font-size: 1.2rem;
+  font-size: 14px;
+  letter-spacing: 2px;
   font-family: "PublicSans";
   font-weight: 400;
   text-transform: uppercase;
@@ -281,10 +286,16 @@ a {
 /* ------------------------------------------- */
 
 .call-to-action-before-footer{
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 14rem 0;
+  justify-content: space-between;*/
+  margin: 14rem 0; 
+  display: grid;
+  grid-template-columns: 35rem 1fr 18rem;
+  grid-row: auto;
+  gap: 3rem;
+  align-items: center;
+  
 }
 .call-to-action-before-footer h2{
   font-size: 40px;
@@ -296,8 +307,10 @@ a {
 } 
 .line{
   border-top: 1px solid var(--slightlyPrimary);
-  width: 53.4rem;
 }
+
+
+
 /* ------------------------------------------- */
 /* ----------------  FOOTER   ---------------- */
 /* ------------------------------------------- */
@@ -404,38 +417,79 @@ On augmente la taille du logo de 200% avec scale(2) */
   }
 }
 
+
+
+
 /* ------------------------------------------- */
 /* ----------------   BOUTON  ---------------- */
 /* ------------------------------------------- */
 
+
+
 .btn-link-about-me{
-  display: flex;
-  background-color: var(--darkBluePrimary);
+  /* background-color: var(--darkBluePrimary); */
+  background-color: rgba(32, 58, 76, 0.9);
   color: var(--whitePrimary);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  width: 20rem;
   height:4.8rem;
   padding: 1.5rem;
+  padding-left:2rem;
+  padding-right: 4rem;
+}
+.btn-link-about-me::before{
+  content:"";
+  position: relative;
+  left: -2rem;
+  width: 2rem;
+  height: 2rem;
   background-image: url(../img/Home/Group-3.svg);
   background-repeat: no-repeat;
-  background-position: top 1.8rem left 1.5rem;
-  padding-left: 7rem;
+  background-position:center;
+  padding: 1.5rem 2.5rem;
+  margin-right: 1.5rem;
+  background-color: rgba(32, 58, 76, 1);
 }
-
 .btn-link-about-me:hover,
 .btn-link-about-me:focus{
-  background-color: var(--slightlyPrimary);
-  background-image: url(../img/Home/Group-3-white.svg);
-  background-repeat: no-repeat;
-  background-position: top 1.8rem left 1.5rem;
+  /* background-color: var(--slightlyPrimary); */
+  background-color: rgba(95, 180, 162, 0.9);
 }
 
-.btn-link-about-me:disabled{
-  background-color: var(--darkBluePrimary);
+.btn-link-about-me:hover::before,
+.btn-link-about-me:focus::before{
+  content:"";
+  position: relative;
+  left: -2rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/Home/Group-3-white.svg);
+  background-repeat: no-repeat;
+  background-position:center;
+  padding: 1.5rem 2.5rem;
+  margin-right: 1.5rem;
+  background-color: rgba(95, 180, 162, 1);
 }
+.btn-link-about-me:disabled{
+  background-color: rgba(234,234,235, 0.9);
+}
+.btn-link-about-me:disabled::before{
+  background-color: rgba(234,234,235, 1);
+  content:"";
+  position: relative;
+  left: -2rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/Home/Group-3-white.svg);
+  background-repeat: no-repeat;
+  background-position:center;
+  padding: 1.5rem 2.5rem;
+  margin-right: 1.5rem;
+}
+
+
 
 
 
@@ -454,6 +508,11 @@ On augmente la taille du logo de 200% avec scale(2) */
   color: var(--slightlyPrimary);
   border: 1px solid var(--slightlyPrimary);
 }
+
+
+
+
+
 /* ------------------------------------------- */ 
 /* ----------------   fleches ---------------- */
 /* ------------------------------------------- */
@@ -498,6 +557,8 @@ On augmente la taille du logo de 200% avec scale(2) */
 }
 
 
+
+
 /* ------------------------------------------- */
 /* ----------------   HOME    ---------------- */
 /* ------------------------------------------- */
@@ -519,6 +580,7 @@ On augmente la taille du logo de 200% avec scale(2) */
   letter-spacing: -0.45px;
   line-height: 1;
   padding: 5.8rem 5.5rem 5rem 0;
+  margin-bottom: 1.4rem;
 }
 
 .home-presentation{
@@ -544,4 +606,52 @@ On augmente la taille du logo de 200% avec scale(2) */
   padding: 2.2rem 0;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+}
+
+
+
+
+/* ------------------------------------------- */
+/* -------------   PORTFOLIO    -------------- */
+/* ------------------------------------------- */
+
+.main-content-item{
+  display: flex;
+  margin-bottom: 8rem;
+}
+.main-content-description{
+  width: 35rem;
+  height:50rem;
+  margin: 0 auto;
+  border-top: 1px solid var(--slightlyPrimary);
+  border-bottom: 1px solid var(--slightlyPrimary);
+}
+
+.main-content-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.main-content-description h2{
+  margin-top: 11rem;
+  font-weight: 900;
+}
+.main-content-description p{
+  margin: 3rem auto;
+  text-align: left;
+  line-height: 1.8;
+}
+
+
+/* ------------------------------------------- */
+/* -------------     MANAGE     -------------- */
+/* ------------------------------------------- */
+.main-content{
+  display: flex;
+  justify-content: space-between;
+}
+.main-content-global{
+  max-width: 35rem;
+}
+.main-content-global-right{
+  max-width: 57%;
 }
