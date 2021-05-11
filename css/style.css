@@ -306,7 +306,7 @@ a {
   display: block;
 } 
 .line{
-  border-top: 1px solid var(--slightlyPrimary);
+  border-top: 1px solid var(--lightGreySecondary);
 }
 
 
@@ -506,55 +506,10 @@ On augmente la taille du logo de 200% avec scale(2) */
 }
 .link-call-to-action:disabled{
   color: var(--slightlyPrimary);
-  border: 1px solid var(--slightlyPrimary);
+  border: 1px solid var(--lightGreySecondary);
 }
 
 
-
-
-
-/* ------------------------------------------- */ 
-/* ----------------   fleches ---------------- */
-/* ------------------------------------------- */
-
-.flexwrap {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-/* ------------------- */
-/* PEN STYLES      -- */
-/* ----------------- */
-
-/* Arrow holder */
-.arrowed {
-	position: relative;
-	/* height: 200px; width: 200px;
-	margin: 0 20px 20px 0;
-	border: 1px solid rgba(0,0,0,0.25); */
-}
-
-/* Just centering the examples */
-.arrowed div {
-	position: absolute;
-	top: 0; bottom: 0; left: 0; right: 0;
-	margin: auto;
-}
-
-/* -- ARROW 1      -- */
-
-.arrow-1 {
-	height: 15px; width: 15px;
-	border: 1px solid tomato;
-	border-width: 2px 2px 0 0;
-	transform: rotate(225deg);
-}
-.arrow-2 {
-	height: 15px; width: 15px;
-	border: 1px solid tomato;
-	border-width: 2px 2px 0 0;
-	transform: rotate(45deg);
-}
 
 
 
@@ -591,8 +546,8 @@ On augmente la taille du logo de 200% avec scale(2) */
   width: 35rem;
   height:60rem;
   margin: 0 auto;
-  border-top: 1px solid var(--slightlyPrimary);
-  border-bottom: 1px solid var(--slightlyPrimary);
+  border-top: 1px solid var(--lightGreySecondary);
+  border-bottom: 1px solid var(--lightGreySecondary);
 }
 
 .presentation-description h2{
@@ -623,8 +578,8 @@ On augmente la taille du logo de 200% avec scale(2) */
   width: 35rem;
   height:50rem;
   margin: 0 auto;
-  border-top: 1px solid var(--slightlyPrimary);
-  border-bottom: 1px solid var(--slightlyPrimary);
+  border-top: 1px solid var(--lightGreySecondary);
+  border-bottom: 1px solid var(--lightGreySecondary);
 }
 
 .main-content-item:nth-child(even) {
@@ -635,23 +590,123 @@ On augmente la taille du logo de 200% avec scale(2) */
   margin-top: 11rem;
   font-weight: 900;
 }
-.main-content-description p{
+/* .main-content-description p{
+  margin: 3rem auto;
+  text-align: left;
+  line-height: 1.8;
+} */
+
+/* commun au portfolio et au autres fichier du portfolio */
+.card-paragraph{
   margin: 3rem auto;
   text-align: left;
   line-height: 1.8;
 }
 
+/* ---------------------------------------------------------------- */
+/* -----    MANAGE / FYLO / BOOKMARK  / INSURE /     -------------- */
+/* ---------------------------------------------------------------- */
 
-/* ------------------------------------------- */
-/* -------------     MANAGE     -------------- */
-/* ------------------------------------------- */
-.main-content{
+/* general */
+.main-content-portfollio{
   display: flex;
   justify-content: space-between;
+  margin-top: 11rem;
 }
 .main-content-global{
   max-width: 35rem;
 }
 .main-content-global-right{
   max-width: 57%;
+  text-align:left;
 }
+
+/* right block */
+.main-content-global-left{
+  max-width: 35rem;
+  max-height: 50rem;
+  border-top: 1px solid var(--lightGreySecondary);
+  border-bottom: 1px solid var(--lightGreySecondary);
+  text-align: left;
+}
+.main-content-global-left h2{
+  margin-top: 5rem;
+  font-weight: 900;
+}
+.main-content-global-left p:nth-child(3){
+  margin: 2rem 0 1.5rem 0;
+  color: var(--slightlyPrimary);
+}
+.main-content-global-left p:last-of-type{
+  margin-bottom: 4rem;
+  color: var(--slightlyPrimary); 
+}
+
+/* left block */
+.main-content-global-right h3:first-of-type {
+  margin-bottom: 3.4rem;
+}
+
+.main-content-global-right a:first-of-type{
+  text-decoration: underline;
+  color: var(--grayishDarkBluePrimary);
+}
+.main-content-list-portfollio li:first-of-type{
+  padding-bottom: 3.2rem;
+}
+.main-content-list-portfollio li:last-of-type{
+  margin-bottom: 6.4rem;
+}
+
+
+/* link into portfollio */
+
+.component-link-portfollio{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.call-to-action-link-porfollio{
+  width: 50%;
+  padding: 4rem;
+  border-top: 1px solid var(--lightGreySecondary);
+  border-bottom: 1px solid var(--lightGreySecondary);
+}
+.call-to-action-link-porfollio:last-of-type{
+  border-left:1px solid var(--lightGreySecondary);
+  text-align: right;
+  padding-right: 4rem;
+}
+.call-to-action-link-porfollio h3{
+  color: var(--grayishDarkBluePrimary);
+}
+.call-to-action-link-porfollio p{
+  color: var(--grayishDarkBluePrimary);
+  
+}
+
+/* ARROW */
+.link-width-arrow1::before{ 
+  content:"";
+  position: relative;
+  display: flex;
+  height: 16px; width: 16px;
+	border: 1px solid var(--grayishDarkBluePrimary);
+	border-width: 2px 2px 0 0;
+	transform: rotate(225deg);
+  top: 4rem;
+  left: -4rem; 
+}
+
+.link-width-arrow2::before{
+  content:"";
+  position: relative;
+  display: flex;
+  height: 16px; width: 16px;
+	border: 1px solid var(--grayishDarkBluePrimary);
+	border-width: 2px 2px 0 0;
+	transform: rotate(45deg);
+  top: 4rem;
+  left: 49rem;
+} 
+
