@@ -127,6 +127,9 @@ h3{
   font-family: "IbarraRealNova", sans-serif;
   font-size: 32px;
 }
+p{
+  opacity: 0.8;
+}
 a {
   text-decoration: none;
 }
@@ -191,6 +194,17 @@ a {
 
 .main-nav__link-actif {
   color:var(--slightlyPrimary);
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus{
+  color:var(--slightlyPrimary);
+  text-decoration: underline;
+}
+.main-nav__link-actif:hover,
+.main-nav__link-actif:focus{
+  color: var(--grayishDarkBluePrimary);
+  text-decoration: underline;
 }
 @media screen and (max-width: 768px) {
   .main-nav__item{
@@ -651,6 +665,12 @@ On augmente la taille du logo de 200% avec scale(2) */
   text-decoration: underline;
   color: var(--grayishDarkBluePrimary);
 }
+.main-content-global-right a:first-of-type:hover,
+.main-content-global-right a:first-of-type:focus{
+  text-decoration: underline;
+  color: var(--slightlyPrimary); 
+}
+
 .main-content-list-portfollio li:first-of-type{
   padding-bottom: 3.2rem;
 }
@@ -682,8 +702,16 @@ On augmente la taille du logo de 200% avec scale(2) */
 }
 .call-to-action-link-porfollio p{
   color: var(--grayishDarkBluePrimary);
-  
 }
+
+
+/* .call-to-action-link-porfollio{
+  background: var(--grayishDarkBluePrimary);
+  background-size: 200% 100%;
+} */
+
+
+
 
 /* ARROW */
 .link-width-arrow1::before{ 
@@ -695,7 +723,7 @@ On augmente la taille du logo de 200% avec scale(2) */
 	border-width: 2px 2px 0 0;
 	transform: rotate(225deg);
   top: 4rem;
-  left: -4rem; 
+  left: -3.7rem; 
 }
 
 .link-width-arrow2::before{
@@ -709,4 +737,125 @@ On augmente la taille du logo de 200% avec scale(2) */
   top: 4rem;
   left: 49rem;
 } 
+
+
+
+
+/* ------------------------------------------- */
+/* -------------    CONTACT     -------------- */
+/* ------------------------------------------- */
+
+.component-contact{
+  display: flex;
+  justify-content: space-between;
+}
+
+.component-contact-description-form{
+  max-width: 57%;
+}
+.component-contact{
+  border-top: 1px solid var(--lightGreySecondary);
+  padding-top: 5rem;
+}
+.component-contact h2{
+  margin-top: -1rem;
+}
+.last-title-contact{
+  margin-top: 2rem;
+}
+.social-list-contact{
+  display: flex;
+  margin: 4rem 0 4rem 0;
+}
+
+.social-item-contact a{
+ display: block;
+  width: 3rem;
+  height: 3rem;
+}
+.social-item-contact {
+  padding-right: 2rem;
+  
+}
+.social-item-contact a[href*="https://github.com/"]{
+  background-image: url(../img/Contact-Me/Path.svg);
+  background-repeat: no-repeat;
+}
+.social-item-contact a[href*="https://twitter.com/"]{
+  background-image: url(../img/Contact-Me/Path-1.svg);
+  background-repeat: no-repeat;
+}
+.social-item-contact a[href*="https://fr.linkedin.com/"]{
+  background-image: url(../img/Contact-Me/Shape.svg);
+  background-repeat: no-repeat;
+}
+.social-item-contact a:hover, .social-item-contact a:focus{
+  transform: scale(2);
+}
+
+
+.form-contact{
+  width: 100%;
+}
+label{
+  font-family: "PublicSans";
+  font-weight: 700;
+  font-size: 13px;
+  color:var(--grayishDarkBluePrimary);
+  margin-bottom: .5rem;
+}
+/* label:nth-child(3),
+label:last-of-type{
+  background-color: yellow;
+} */
+
+.form-contact input,
+.form-contact textarea{
+  width : 100%; 
+  background-color: rgba(51,50,61, 0.1);
+  border: 1px solid transparent;
+  padding: 1.6rem;
+  margin: 1.5rem 0 3rem 0;
+}
+input::placeholder,
+textarea::placeholder{
+  color:rgba(51,50,61, 0.4);
+  font-family: "PublicSans";
+  font-size: 13px;
+}
+
+input:focus,
+textarea:focus{
+  border: 1px solid var(--slightlyPrimary);
+  color: var(--grayishDarkBluePrimary);
+  outline: 0;
+}
+/* input:required:invalid,
+textarea:required:invalid{
+  border: 1px solid var(--brightRedSecondary);
+  outline: 0;
+} */
+
+
+input[type=submit]{
+  background-color: var(--darkBluePrimary);
+  font-family: "PublicSans";
+  color: var(--whitePrimary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  max-width: 200px;
+  margin-top: -3rem;
+  margin-bottom: 10rem;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus{
+  background-color: rgba(95, 180, 162, 0.9);
+}
+
+input[type=submit]:disabled{
+  background-color: rgba(234,234,235, 0.9);
+}
 
