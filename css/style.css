@@ -64,46 +64,57 @@
 .container {
     margin: 0 auto;
   }
-  /* @media (min-width: 48em){
-    .container {
-      margin: 0 3.2rem;
-    }
-  } */
+ 
+/* Extra Extra small phones */
+@media screen and (max-width: 22em) {
+  /* 20em * 16 = 320px */
+  .container {
+    max-width: 18rem;
+    margin: 0 auto;
+  }
+}
 
-
-  @media (min-width: 36em) {
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 36em) {
+  .container {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+  @media screen and (min-width: 36em) {
     /* 36em * 16 = 576px */
     .container {
       max-width: 50rem;
     }
   }
-  
-  @media (min-width: 48em) {
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media screen and (min-width: 48em) {
     /* 48em * 16 = 768px */
     .container {
       max-width: 70rem;
     }
   }
-  
-  @media (min-width: 62em) {
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media screen and (min-width: 62em) {
     /* 62em * 16 = 992px */
     .container {
       max-width: 90rem;
     }
   }
-  
-  @media (min-width: 80em) {
-    /* 80em * 16 = 1280px */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media screen and (min-width: 80em) {
+    /* 80em * 16 = 1280px   */
     .container {
       max-width: 110rem;
     }
   }
-  
-  /* @media (min-width: 105em) {
+/*   
+   @media (min-width: 105em) {
     .container {
       max-width: 128rem;
     }
-  } */
+  }  */
 
 /* ------------------------------------------- */
 /* ----------------   RESET   ---------------- */
@@ -111,12 +122,13 @@
 
 body{
   font-size: 16px;
-  font-family: "PublicSans", sans-serif;
+  font-family: "PublicSans", Arial, Helvetica, sans-serif;
   color: var(--grayishDarkBluePrimary);
+  background-color: var(--veryLightGreySecondary);
 }
 h1,
 h2{
-  font-family: "IbarraRealNova", sans-serif;
+  font-family: "IbarraRealNova", Arial, Helvetica, sans-serif;
   font-size: 50px;
   font-weight: 700;
 }
@@ -135,15 +147,9 @@ a {
 }
 
 
-
-
-
 /* ------------------------------------------- */
 /* ----------------   HEADER  ---------------- */
 /* ------------------------------------------- */
-
-
-/* Header */
 
 .container-header {
   position: relative;
@@ -152,14 +158,12 @@ a {
   align-items: center;
   margin: 0 auto;
 }
-
 .container-logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
 }
-
 
 /* // ACTIVITY */
 
@@ -176,7 +180,6 @@ a {
 .main-nav__item{
   padding: 5rem 0;
 }
-
 .main-nav__link {
   display: block;
   padding-top: 2rem;
@@ -191,11 +194,9 @@ a {
   text-decoration: none;
   transition: .3s;
 }
-
 .main-nav__link-actif {
   color:var(--slightlyPrimary);
 }
-
 .main-nav__link:hover,
 .main-nav__link:focus{
   color:var(--slightlyPrimary);
@@ -206,7 +207,7 @@ a {
   color: var(--grayishDarkBluePrimary);
   text-decoration: underline;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 36em) {
   .main-nav__item{
     padding: 0;
   }
@@ -215,11 +216,10 @@ a {
     height: 18rem;
     top: 10rem;
     /* left: 10rem; */
-    left: 46%;
+    left: 32%;
     background-color: var(--grayishDarkBluePrimary);
     text-align: center;
   }
-
   .main-nav__link {
     color: var(--whitePrimary);
     padding-right: 3rem;
@@ -229,7 +229,12 @@ a {
     color: var(--slightlyPrimary);
   }
 }
-
+@media screen and (max-width: 20em) {
+  /* 20em * 16 = 320px */
+  .main-nav__list {
+    left: 21%;
+  }
+}
 /* Mobile Menu */
 .main-nav__toggler {
   display: grid;
@@ -239,50 +244,40 @@ a {
   background-color: transparent;
   margin: 5rem 0;
 }
-
 .main-nav__bar {
   width: 2.1rem;
   height: 0.2rem;
   background-color: var(--grayishDarkBluePrimary);
   transition: .3s;
 }
-
 /* First element rotation when aria-expanded : true without [aria-expanded] */
 .main-nav__toggler[aria-expanded="true"] .main-nav__bar:first-child {
   transform: rotate(45deg);
 }
-
 /* Opacity 0 on the middle element when aria-expanded : [aria-expanded] true*/
 .main-nav__toggler[aria-expanded="true"] .main-nav__bar:not(:first-child):not(:last-child) {
   opacity: 0;
 }
-
 /* Last element rotation when aria-expanded : [aria-expanded] true*/
 .main-nav__toggler[aria-expanded="true"] .main-nav__bar:last-child {
   transform: rotate(-45deg);
 }
-
 /* Set transform origin */
 .main-nav__bar:first-child {
   transform-origin: left top;
 }
-
 .main-nav__bar:last-child {
   transform-origin: left bottom;
 }
-
 /* reset origin transformation */
-
 .main-nav__toggler[aria-expanded="true"] + .main-nav__list {
   transform: translateX(0);
 }
-
 /* I want to make the menu disappear from the tablet format  */
-
 /* Media queries */
 /* 
 /* /* Medium devices (landscape tablets, 768px and up) --> we apply the following rules from 768 px ( > or = ) */
-@media screen and (min-width: 49em) {
+@media screen and (min-width: 36em) {
   .main-nav__list {
       position: static;
       display: flex;
@@ -291,154 +286,12 @@ a {
   .main-nav__toggler {
       display: none;
   } 
-
 }
-
-
-/* ------------------------------------------- */
-/* ---------  DIV BEFORE FOOTER   ------------ */
-/* ------------------------------------------- */
-
-.call-to-action-before-footer{
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between;*/
-  margin: 14rem 0; 
-  display: grid;
-  grid-template-columns: 35rem 1fr 18rem;
-  grid-row: auto;
-  gap: 3rem;
-  align-items: center;
-  
-}
-.call-to-action-before-footer h2{
-  font-size: 40px;
-  text-align: left;
-  line-height: 1.2;
-}
-.call-to-action-before-footer span{
-  display: block;
-} 
-.line{
-  border-top: 1px solid var(--lightGreySecondary);
-}
-
-
-
-/* ------------------------------------------- */
-/* ----------------  FOOTER   ---------------- */
-/* ------------------------------------------- */
-
-
-.main-footer{
-  background-color: var(--grayishDarkBluePrimary);
-}
-.container-footer{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.container-logo-nav{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.main-nav__list-footer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.main-nav__link-footer {
-  padding-left: 4rem;
-  font-family: "PublicSans";
-  font-weight: 400;
-  text-transform: uppercase;
-  color: var(--whitePrimary);
-  text-decoration: none;
-}
-.main-nav__link-footer:hover,
-.main-nav__link-footer:focus{
-  color:var(--slightlyPrimary);
-}
-
-.social-item {
-  padding-left: 2rem;
-}
-.social-list{
-  display: flex;
-  margin: 4rem 0 4rem 0;
-}
-
-.social-item a{
- display: block;
-  width: 3rem;
-  height: 3rem;
-}
-
-.social-item a[href*="https://github.com/"]{
-  background-image: url(../img/Home/Path.svg);
-  background-repeat: no-repeat;
-}
-.social-item a[href*="https://twitter.com/"]{
-  background-image: url(../img/Home/Path-1.svg);
-  background-repeat: no-repeat;
-}
-.social-item a[href*="https://fr.linkedin.com/"]{
-  background-image: url(../img/Home/Shape.svg);
-  background-repeat: no-repeat;
-}
-/* Animation au hover sur les logo 
-On augmente la taille du logo de 200% avec scale(2) */
-.social-item a:hover, .social-item a:focus{
-  transform: scale(2);
-}
-  
-@media (max-width: 48em) {
-  /* 48em * 16 = 768px */
-  .container-logo-nav{
-    display: block;
-  }
-  .container-logo-nav img{
-    margin: 0 auto;
-  }
-  .footer-nav{
-    margin: 0 auto;
-  }
-  .container-footer{
-    display: block;
-    text-align: center;
-    padding: 3rem;
-  }
-  .main-nav__list-footer{
-    display: block;
-    margin-right: 3rem;
-  }
-  /* .container-logo{
-    margin-left: 19rem;
-  } */
-  .social-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .main-nav__item-footer{
-    margin: 0;
-    padding: 2rem 0;
-  }
-  .main-nav__item-footer:last-child{
-    margin-bottom: 4rem;
-  }
-}
-
-
 
 
 /* ------------------------------------------- */
 /* ----------------   BOUTON  ---------------- */
 /* ------------------------------------------- */
-
-
 
 .btn-link-about-me{
   /* background-color: var(--darkBluePrimary); */
@@ -468,10 +321,8 @@ On augmente la taille du logo de 200% avec scale(2) */
 }
 .btn-link-about-me:hover,
 .btn-link-about-me:focus{
-  /* background-color: var(--slightlyPrimary); */
   background-color: rgba(95, 180, 162, 0.9);
 }
-
 .btn-link-about-me:hover::before,
 .btn-link-about-me:focus::before{
   content:"";
@@ -486,9 +337,9 @@ On augmente la taille du logo de 200% avec scale(2) */
   margin-right: 1.5rem;
   background-color: rgba(95, 180, 162, 1);
 }
-.btn-link-about-me:disabled{
+/* .btn-link-about-me:disabled{
   background-color: rgba(234,234,235, 0.9);
-}
+} */
 .btn-link-about-me:disabled::before{
   background-color: rgba(234,234,235, 1);
   content:"";
@@ -501,12 +352,8 @@ On augmente la taille du logo de 200% avec scale(2) */
   background-position:center;
   padding: 1.5rem 2.5rem;
   margin-right: 1.5rem;
+  cursor: not-allowed;
 }
-
-
-
-
-
 .link-call-to-action{
   padding: 1.5rem 3.5rem;
   color: var(--grayishDarkBluePrimary);
@@ -518,32 +365,26 @@ On augmente la taille du logo de 200% avec scale(2) */
   color: var(--whitePrimary);
   background-color: var(--darkBluePrimary);
 }
-.link-call-to-action:disabled{
+/* .link-call-to-action:disabled{
   color: var(--slightlyPrimary);
   border: 1px solid var(--lightGreySecondary);
-}
-
-
-
-
+} */
 
 
 /* ------------------------------------------- */
 /* ----------------   HOME    ---------------- */
 /* ------------------------------------------- */
 
-.home-container{
-  max-height: 75rem;
+.home-container-hero{
+  max-height: 65rem;
 }
-
 .hero-description{
-  width: 44.5rem;
+  max-width: 44.5rem;
   height: 35.7rem;
   position: relative;
   bottom: 35.7rem;
   background-color: var(--veryLightGreySecondary);
 }
-
 .hero-description h1{
   text-align: left;
   letter-spacing: -0.45px;
@@ -551,10 +392,9 @@ On augmente la taille du logo de 200% avec scale(2) */
   padding: 5.8rem 5.5rem 5rem 0;
   margin-bottom: 1.4rem;
 }
-
 .home-presentation{
   display: grid;
-  grid-template-columns: 54rem 1fr;
+  grid-template-columns: 50rem 1fr;
 }
 .presentation-description{
   width: 35rem;
@@ -569,15 +409,90 @@ On augmente la taille du logo de 200% avec scale(2) */
   font-size: 4rem;
   padding-top: 5.4rem;
 }
-
 .presentation-description p{
   text-align: left;
   padding: 2.2rem 0;
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
-
-
+@media screen and (max-width: 62em){
+  .hero-illustration-bcg-img {
+    background-image: url(../img/Home/img-illustration-tablet.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60rem;
+    margin-left: .1rem;
+  }
+  .hero-illustration-home-page{
+    display:none;
+  }
+  .home-presentation{
+    grid-template-columns: 28rem 1fr;
+    column-gap: 7rem;
+  }
+  .presentation-illustration-bck-img{
+    background-image: url(../img/Home/portrait-home-tablet.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 60rem;
+  }
+  .presentation-illustration-home-page{
+    display:none;
+  }
+  .hero-description{
+    max-width: 51rem;
+    height: 27.1rem;
+    bottom: 27rem;
+  }
+  .hero-description h1{
+    font-size: 40px;
+    margin-bottom: .7rem;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 36em) {
+  .home-container-hero{
+    max-height: 60rem;
+  }
+  .hero-illustration-bcg-img {
+    max-height: 30rem;
+    background-size: contain;
+  }
+  .hero-description{
+    margin-top: 27rem;
+  }
+  .hero-description h1{
+    padding: 1rem 0 2.8rem 0;
+  }
+  .presentation-illustration-bck-img{
+    background-image: none;
+    max-height: 34rem;
+    margin-bottom: 5rem;
+  }
+  .presentation-illustration-home-page{
+    display:block;
+  }
+  .home-presentation{
+    display:block;
+    margin-top: 1rem;
+  }
+  .presentation-description{
+    width: 100%;
+    min-height: 65rem;
+  }
+}
+/* Extra Extra small phones */
+@media screen and (max-width: 20em) {
+  .hero-illustration-bcg-img {
+    max-height: 25rem;
+  }
+  .presentation-illustration-bck-img{
+    margin-bottom: 2rem;
+  }
+  .presentation-description h2{
+    padding-top: 2rem;
+  }
+}
 
 
 /* ------------------------------------------- */
@@ -586,29 +501,24 @@ On augmente la taille du logo de 200% avec scale(2) */
 
 .main-content-item{
   display: flex;
+  justify-content: space-between;
   margin-bottom: 8rem;
 }
 .main-content-description{
   width: 35rem;
   height:50rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-left: 7rem;
   border-top: 1px solid var(--lightGreySecondary);
   border-bottom: 1px solid var(--lightGreySecondary);
 }
-
 .main-content-item:nth-child(even) {
   flex-direction: row-reverse;
 }
-
 .main-content-description h2{
   margin-top: 11rem;
   font-weight: 900;
 }
-/* .main-content-description p{
-  margin: 3rem auto;
-  text-align: left;
-  line-height: 1.8;
-} */
 
 /* commun au portfolio et au autres fichier du portfolio */
 .card-paragraph{
@@ -616,6 +526,50 @@ On augmente la taille du logo de 200% avec scale(2) */
   text-align: left;
   line-height: 1.8;
 }
+@media screen and (max-width: 62em){
+  .main-content-item{
+    padding: 5rem 0;
+    margin-bottom: 0;
+  }
+  .main-content-illustration{
+    max-width: 34rem;
+    margin: 5rem auto;
+  }
+  .main-content-description{
+    margin-left: 7rem;
+    height:auto;
+  }
+  .main-content-description-mg-r{
+    margin: 0 7rem 0 0;
+  }
+  .main-content-description h2{
+    font-weight: 700;
+    margin: 0;
+    padding-top: 3rem;
+  }
+}
+@media screen and (max-width: 36em) {
+  .main-content{
+    margin-top: -3rem;
+  }
+  .main-content-item{
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .main-content-description{
+    width: 100%;
+    margin: 0 auto;
+    min-height: 40rem;
+  }
+  .main-content-illustration {
+    margin: 3rem auto;
+  }
+  .card-paragraph{
+    margin: 1rem 0 3rem 0;
+  }
+}
+
 
 /* ---------------------------------------------------------------- */
 /* -----    MANAGE / FYLO / BOOKMARK  / INSURE /     -------------- */
@@ -635,7 +589,7 @@ On augmente la taille du logo de 200% avec scale(2) */
   text-align:left;
 }
 
-/* right block */
+/* left block */
 .main-content-global-left{
   max-width: 35rem;
   max-height: 50rem;
@@ -656,11 +610,10 @@ On augmente la taille du logo de 200% avec scale(2) */
   color: var(--slightlyPrimary); 
 }
 
-/* left block */
+/* right block */
 .main-content-global-right h3:first-of-type {
   margin-bottom: 3.4rem;
 }
-
 .main-content-global-right a:first-of-type{
   text-decoration: underline;
   color: var(--grayishDarkBluePrimary);
@@ -670,17 +623,100 @@ On augmente la taille du logo de 200% avec scale(2) */
   text-decoration: underline;
   color: var(--slightlyPrimary); 
 }
-
 .main-content-list-portfollio li:first-of-type{
   padding-bottom: 3.2rem;
 }
 .main-content-list-portfollio li:last-of-type{
   margin-bottom: 6.4rem;
 }
-
+@media screen and (max-width: 62em){
+  .main-content-portfollio{
+    display: block;
+  }
+  .main-content-global{
+    max-width: 100%;
+  }
+  .main-content-global-left h2{
+    margin-top: 3.7rem;
+    font-weight: 700;
+  }
+  .main-content-global-left p:nth-child(3){
+    margin: 1rem 0 .5rem 0;
+  }
+  .main-content-global-left p:last-of-type{
+    margin-bottom: 2rem;
+  }
+  .card-paragraph{
+    line-height: 2;
+    padding-top: 1rem;
+  }
+  .grid-1{
+    grid-area : header-left;
+  }
+  .grid-2{
+    grid-area : main-component;
+  }
+  .grid-3{
+    grid-area : littel-p-left;
+  }
+  .grid-4{
+    grid-area : second-p-left;
+  }
+  .grid-5{
+    grid-area : footer-call-to-action;
+    margin-bottom: 3.3rem;
+  }
+  .main-content-global-left{
+    max-width: 100%;
+    display: grid;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: .5rem;
+    grid-template-columns : repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header-left main-component"
+                        "littel-p-left main-component"
+                        "second-p-left main-component"
+                        "footer-call-to-action main-component";
+  }
+  .main-content-global-right{
+    display:block;
+    max-width: 100%;
+  }
+  .main-content-global-right h3{
+    padding-top: 4rem;
+  }
+  .component-portfollio-illustration h3{
+    padding-top: 0;
+  }
+  .main-content-item-illustration img{
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 36em) {
+ .main-content-global-left{
+  display: block;
+ }
+ .main-content-portfollio {
+  margin: 4rem auto;
+}
+.main-content-global-left h2{
+  margin-top: 2rem;
+}
+.card-paragraph{
+  padding: 0;
+  font-size: 15px;
+}
+.main-content-global-left p:nth-child(3){
+  margin: 2rem 0 1.5rem 0;
+  font-size: 13px;
+}
+.main-content-global-left p:last-of-type{
+  margin-bottom: 3rem;
+  font-size: 13px;
+}
+}
 
 /* link into portfollio */
-
 .component-link-portfollio{
   display:flex;
   align-items: center;
@@ -703,15 +739,11 @@ On augmente la taille du logo de 200% avec scale(2) */
 .call-to-action-link-porfollio p{
   color: var(--grayishDarkBluePrimary);
 }
-
-
-/* .call-to-action-link-porfollio{
-  background: var(--grayishDarkBluePrimary);
-  background-size: 200% 100%;
-} */
-
-
-
+.call-to-action-link-porfollio:hover,
+.call-to-action-link-portfollio:focus{
+background-color: var(--lightMoreGreyTertiary);
+transition: 3s;
+}
 
 /* ARROW */
 .link-width-arrow1::before{ 
@@ -725,7 +757,6 @@ On augmente la taille du logo de 200% avec scale(2) */
   top: 4rem;
   left: -3.7rem; 
 }
-
 .link-width-arrow2::before{
   content:"";
   position: relative;
@@ -737,8 +768,33 @@ On augmente la taille du logo de 200% avec scale(2) */
   top: 4rem;
   left: 49rem;
 } 
-
-
+@media screen and (max-width: 80em) {
+  .link-width-arrow2::before{
+    left: 39rem;
+  } 
+}
+@media screen and (max-width: 62em){
+  .link-width-arrow2::before{
+    left: 29rem;
+  } 
+}
+@media screen and (max-width: 36em) {
+ .call-to-action-link-porfollio{
+   display: block;
+   padding: 5rem 0 2rem 0;
+ }
+ .call-to-action-link-porfollio:last-of-type{
+  padding-right: 0;
+}
+.link-width-arrow2::before{
+  left: 14rem;
+  top: -2rem;
+} 
+.link-width-arrow1::before{ 
+  top: -2rem;
+  left: 0;
+}
+}
 
 
 /* ------------------------------------------- */
@@ -749,7 +805,6 @@ On augmente la taille du logo de 200% avec scale(2) */
   display: flex;
   justify-content: space-between;
 }
-
 .component-contact-description-form{
   max-width: 57%;
 }
@@ -767,7 +822,6 @@ On augmente la taille du logo de 200% avec scale(2) */
   display: flex;
   margin: 4rem 0 4rem 0;
 }
-
 .social-item-contact a{
  display: block;
   width: 3rem;
@@ -792,8 +846,6 @@ On augmente la taille du logo de 200% avec scale(2) */
 .social-item-contact a:hover, .social-item-contact a:focus{
   transform: scale(2);
 }
-
-
 .form-contact{
   width: 100%;
 }
@@ -804,11 +856,6 @@ label{
   color:var(--grayishDarkBluePrimary);
   margin-bottom: .5rem;
 }
-/* label:nth-child(3),
-label:last-of-type{
-  background-color: yellow;
-} */
-
 .form-contact input,
 .form-contact textarea{
   width : 100%; 
@@ -816,6 +863,7 @@ label:last-of-type{
   border: 1px solid transparent;
   padding: 1.6rem;
   margin: 1.5rem 0 3rem 0;
+  resize: none; /* permet de ne pas modifier la taille du textarea  */
 }
 input::placeholder,
 textarea::placeholder{
@@ -823,20 +871,12 @@ textarea::placeholder{
   font-family: "PublicSans";
   font-size: 13px;
 }
-
 input:focus,
 textarea:focus{
   border: 1px solid var(--slightlyPrimary);
   color: var(--grayishDarkBluePrimary);
   outline: 0;
 }
-/* input:required:invalid,
-textarea:required:invalid{
-  border: 1px solid var(--brightRedSecondary);
-  outline: 0;
-} */
-
-
 input[type=submit]{
   background-color: var(--darkBluePrimary);
   font-family: "PublicSans";
@@ -849,13 +889,178 @@ input[type=submit]{
   margin-top: -3rem;
   margin-bottom: 10rem;
 }
-
 input[type=submit]:hover,
 input[type=submit]:focus{
   background-color: rgba(95, 180, 162, 0.9);
 }
-
 input[type=submit]:disabled{
   background-color: rgba(234,234,235, 0.9);
+  cursor: not-allowed;
+}
+@media screen and (max-width: 62em){
+  .component-contact{
+    display: block;
+  }
+  .component-contact-description-form {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 36em) {
+  .component-contact-description-form p{
+    font-size: 15px;
+  }
 }
 
+/* ------------------------------------------- */
+/* ---------  DIV BEFORE FOOTER   ------------ */
+/* ------------------------------------------- */
+
+.call-to-action-before-footer{
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;*/
+  margin: 14rem 0; 
+  display: grid;
+  grid-template-columns: 35rem 1fr 18rem;
+  grid-row: auto;
+  gap: 3rem;
+  align-items: center;
+  
+}
+.call-to-action-before-footer h2{
+  font-size: 40px;
+  text-align: left;
+  line-height: 1.2;
+}
+.call-to-action-before-footer span{
+  display: block;
+} 
+.line{
+  border-top: 1px solid var(--lightGreySecondary);
+}
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 36em) {
+  .call-to-action-before-footer{
+    display: block;
+    text-align: center;
+    margin: 5rem auto;
+  }
+  .call-to-action-before-footer h2{
+    padding-bottom: 4rem;
+  }
+  .line{
+    display: none;
+  }
+}
+/* Extra Extra small phones */
+@media screen and (max-width: 20em) {
+  .call-to-action-before-footer h2 {
+    text-align: center;
+  }
+}
+
+
+/* ------------------------------------------- */
+/* ----------------  FOOTER   ---------------- */
+/* ------------------------------------------- */
+
+.main-footer{
+  background-color: var(--grayishDarkBluePrimary);
+}
+.container-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-logo-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-nav__list-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-nav__link-footer {
+  padding-left: 4rem;
+  font-family: "PublicSans";
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--whitePrimary);
+  text-decoration: none;
+}
+.main-nav__link-footer:hover,
+.main-nav__link-footer:focus{
+  color:var(--slightlyPrimary);
+}
+.social-item {
+  padding-left: 2rem;
+}
+.social-list{
+  display: flex;
+  margin: 4rem 0 4rem 0;
+}
+.social-item a{
+ display: block;
+  width: 3rem;
+  height: 3rem;
+}
+.social-item a[href*="https://github.com/"]{
+  background-image: url(../img/Home/Path.svg);
+  background-repeat: no-repeat;
+}
+.social-item a[href*="https://twitter.com/"]{
+  background-image: url(../img/Home/Path-1.svg);
+  background-repeat: no-repeat;
+}
+.social-item a[href*="https://fr.linkedin.com/"]{
+  background-image: url(../img/Home/Shape.svg);
+  background-repeat: no-repeat;
+}
+/* Animation au hover sur les logo 
+On augmente la taille du logo de 200% avec scale(2) */
+.social-item a:hover, .social-item a:focus{
+  transform: scale(2);
+}
+@media (max-width: 48em) {
+  /* 48em * 16 = 768px */
+  .container-logo-nav{
+    display: block;
+  }
+  .container-logo-nav img{
+    margin: 0 auto;
+  }
+  .footer-nav{
+    margin: 0 auto;
+  }
+  .container-footer{
+    display: block;
+    text-align: center;
+    padding: 3rem;
+  }
+  .main-nav__list-footer{
+    display: block;
+    margin-right: 3rem;
+  }
+  .social-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-nav__item-footer{
+    margin: 0;
+    padding: 2rem 0;
+  }
+  .main-nav__item-footer:last-child{
+    margin-bottom: 4rem;
+  }
+  .main-nav__item-footer img{
+    margin: 0 46%;
+  }
+}
+@media (max-width: 36em) {
+  .main-nav__item-footer img{
+    margin-left: 10rem;
+  }
+}
