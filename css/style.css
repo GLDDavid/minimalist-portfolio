@@ -877,7 +877,7 @@ textarea:focus{
   color: var(--grayishDarkBluePrimary);
   outline: 0;
 }
-input[type=submit]{
+input[type="submit"]{
   background-color: var(--darkBluePrimary);
   font-family: "PublicSans";
   color: var(--whitePrimary);
@@ -889,14 +889,14 @@ input[type=submit]{
   margin-top: -3rem;
   margin-bottom: 10rem;
 }
-input[type=submit]:hover,
-input[type=submit]:focus{
+input[type="submit"]:hover,
+input[type="submit"]:focus{
   background-color: rgba(95, 180, 162, 0.9);
 }
-input[type=submit]:disabled{
+/* input[type=submit]:disabled{
   background-color: rgba(234,234,235, 0.9);
   cursor: not-allowed;
-}
+} */
 @media screen and (max-width: 62em){
   .component-contact{
     display: block;
@@ -910,6 +910,23 @@ input[type=submit]:disabled{
     font-size: 15px;
   }
 }
+
+
+
+.input-disabled{
+  background-color: rgba(234,234,235, 0.9);
+  cursor: not-allowed;
+}
+.error{
+  color: var(--brightRedSecondary);
+  display:flex; 
+  font-family: "IbarraRealNova";
+  font-weight: 700;
+  font-size: 16px;
+}
+
+
+
 
 /* ------------------------------------------- */
 /* ---------  DIV BEFORE FOOTER   ------------ */

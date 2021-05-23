@@ -57,14 +57,17 @@
                     <h2 class="last-title-contact">Contact Me</h2>
                 </div>
                 <div class="component-contact-description-form">
-                    <form action="" method="post" class="form-contact">
+                    <form action="" method="post" class="form-contact" name="myForm">
                         <label for="name" class="first-label">Name</label>
+                        <span class="error" id="errorname"></span>
                         <input type="text" name="name" id="name" placeholder="Jane Appleseed" required>
                         <label for="email">Email Address</label>
+                        <span class="error" id="errormail"></span>
                         <input type="email" name="email" id="email" placeholder="email@example.com" required>
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="How can I help?" rows="5" cols="33" required></textarea>
-                        <input type="submit" value="SEND MESSAGE">
+                        <label for="text">Message</label>
+                        <span class="error" id="errortext"></span>
+                        <textarea id="text" name="text" placeholder="How can I help?" rows="5" cols="33" required></textarea>
+                        <input type="submit" value="SEND MESSAGE" id="submitForm">
                     </form>
                 </div>
            </div>
