@@ -64,15 +64,6 @@
 .container {
     margin: 0 auto;
   }
- 
-/* Extra Extra small phones */
-@media screen and (max-width: 22em) {
-  /* 20em * 16 = 320px */
-  .container {
-    max-width: 18rem;
-    margin: 0 auto;
-  }
-}
 
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 36em) {
@@ -81,6 +72,16 @@
     margin: 0 auto;
   }
 }
+
+/* Extra Extra small phones */
+@media screen and (max-width: 22em) {
+  /* 20em * 16 = 320px */
+  .container {
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
   @media screen and (min-width: 36em) {
     /* 36em * 16 = 576px */
@@ -492,6 +493,9 @@ a {
   .presentation-description h2{
     padding-top: 2rem;
   }
+  .presentation-description{
+    min-height: 80rem;
+  }
 }
 
 
@@ -526,6 +530,11 @@ a {
   text-align: left;
   line-height: 1.8;
 }
+@media screen and (max-width: 70em) {
+  .main-content-description-mg-r{
+    padding-right: 5rem;
+  }
+}
 @media screen and (max-width: 62em){
   .main-content-item{
     padding: 5rem 0;
@@ -537,7 +546,7 @@ a {
   }
   .main-content-description{
     margin-left: 7rem;
-    height:auto;
+    min-height: 41rem;
   }
   .main-content-description-mg-r{
     margin: 0 7rem 0 0;
@@ -569,7 +578,13 @@ a {
     margin: 1rem 0 3rem 0;
   }
 }
-
+@media screen and (max-width: 22rem){
+  .main-content-description{
+    width: 100%;
+    margin: 0 auto;
+    min-height: 45rem;
+  }
+}
 
 /* ---------------------------------------------------------------- */
 /* -----    MANAGE / FYLO / BOOKMARK  / INSURE /     -------------- */
@@ -778,24 +793,41 @@ transition: 3s;
     left: 29rem;
   } 
 }
-@media screen and (max-width: 36em) {
- .call-to-action-link-porfollio{
-   display: block;
-   padding: 5rem 0 2rem 0;
- }
- .call-to-action-link-porfollio:last-of-type{
-  padding-right: 0;
-}
-.link-width-arrow2::before{
-  left: 14rem;
-  top: -2rem;
-} 
-.link-width-arrow1::before{ 
-  top: -2rem;
-  left: 0;
-}
-}
 
+/* Extra Extra small phones */
+@media screen and (max-width: 25em) {
+  .main-content-global-left{
+    min-height: 55rem;
+  }
+  .link-width-arrow2::before{
+    left: 10rem;
+    top: -2.1rem;
+  } 
+  .call-to-action-link-porfollio:last-of-type{
+    /* padding: 7.4rem 0 2rem 0; */
+    padding: 5.2rem 0 4.2rem 0;
+  }
+}
+@media screen and (max-width: 36em) {
+  .main-content-global-left{
+    min-height: 40rem;
+  }
+  .call-to-action-link-porfollio{
+    display: block;
+    padding: 5rem 0 2rem 0;
+  }
+  .call-to-action-link-porfollio:last-of-type{
+    padding: 5rem 0 2rem 0;
+ }
+ .link-width-arrow2::before{
+   left: 14rem;
+   top: -2rem;
+ } 
+ .link-width-arrow1::before{ 
+   top: -2rem;
+   left: 0;
+ }
+ }
 
 /* ------------------------------------------- */
 /* -------------    CONTACT     -------------- */
@@ -912,11 +944,11 @@ input[type="submit"]:focus{
 }
 
 
-
+/* 
 .input-disabled{
   background-color: rgba(234,234,235, 0.9);
   cursor: not-allowed;
-}
+} */
 .error{
   color: var(--brightRedSecondary);
   display:flex; 
@@ -1073,11 +1105,12 @@ On augmente la taille du logo de 200% avec scale(2) */
     margin-bottom: 4rem;
   }
   .main-nav__item-footer img{
-    margin: 0 46%;
+    margin: 0 48%;
   }
 }
-@media (max-width: 36em) {
-  .main-nav__item-footer img{
-    margin-left: 10rem;
+@media screen and (max-width: 22em) {
+  .footer-nav{
+    min-width: 18rem;
+    margin-left: -1rem;
   }
 }
