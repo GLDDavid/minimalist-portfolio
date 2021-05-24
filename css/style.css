@@ -839,6 +839,11 @@ transition: 3s;
     left: 29rem;
   } 
 }
+@media screen and (max-width: 48em){
+  .link-width-arrow2::before{
+    left: 19rem;
+  } 
+}
 
 /* Extra Extra small phones */
 @media screen and (max-width: 25em) {
